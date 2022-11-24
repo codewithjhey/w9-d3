@@ -1,5 +1,7 @@
 import { Card, Col } from "react-bootstrap"
 import { Component } from "react"
+import AddComments from "./CommentsList"
+import CommentsList from "./AddComments"
 
 class SingleBook extends Component {
   state = {
@@ -16,7 +18,7 @@ class SingleBook extends Component {
 
   render() {
     return (
-      <Col md={4} key={this.props.book.asin}>
+      <>
         <Card
           className="book-card my-3"
           style={{
@@ -30,7 +32,13 @@ class SingleBook extends Component {
             <Card.Title>{this.props.book.title}</Card.Title>
           </Card.Body>
         </Card>
-      </Col>
+        {this.state.selected && (
+          <AddComments elementId={this.props.book.asin} />
+        )}
+        {this.state.selected && (
+          <CommentsList elementId={this.props.book.asin} />
+        )}
+      </>
     )
   }
 }
