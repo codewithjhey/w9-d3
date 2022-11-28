@@ -79,8 +79,9 @@ class CommentsList extends Component {
         )} */}
         <ListGroup className="mt-4">
           {this.state.comments.map((r) => (
-            <ListGroup.Item key={r._id} 
-            onClick {}
+            <ListGroup.Item
+              key={r._id}
+              onClick={() => this.deleteComment(r._id)}
             >
               {r.rate} rating out of 5 - {r.comment}
             </ListGroup.Item>
