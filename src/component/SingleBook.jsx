@@ -22,7 +22,6 @@ class SingleBook extends Component {
         <Card
           className="book-card my-2"
           style={{
-            width: "18rem",
             border: this.state.selected ? "2px solid magenta" : ""
           }}
           onClick={() => this.handleSelected()}
