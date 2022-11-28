@@ -20,7 +20,7 @@ class SingleBook extends Component {
     return (
       <>
         <Card
-          className="book-card my-3"
+          className="book-card my-2"
           style={{
             width: "18rem",
             border: this.state.selected ? "2px solid magenta" : ""
